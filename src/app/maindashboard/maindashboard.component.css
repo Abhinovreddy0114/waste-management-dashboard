@@ -1,0 +1,95 @@
+/* card.component.css */
+
+.card {
+    width: 500px;
+    background-color: #f0f0f0;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    margin: 20px;
+    transition: background-color 0.3s ease;
+    overflow: hidden; /* Hide overflow content */
+}
+
+.card:hover {
+    background-color: #e0e0e0; /* Highlight color on hover */
+}
+
+.card-content {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.first30 {
+    background-color: #4CAF50; /* Green background color */
+    color: white; /* White text color */
+    padding: 10px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Optional: Add a subtle shadow */
+}
+
+.button {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.button button {
+    background-color: #3498db; /* Button background color */
+    color: white; /* Button text color */
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.button button:hover {
+    background-color: #2980b9; /* Highlight color on hover */
+}
+
+/* Styling for the table outside the card */
+.outside-table {
+    width: 95%; /* Set to 95% of the page width */
+    margin: 20px auto 30px; /* Center the table, provide spacing at the top and bottom */
+    border-collapse: collapse;
+}
+
+.outside-table th, .outside-table td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+    max-width: 60px; /* Set a maximum width for columns, adjust as needed */
+    white-space: nowrap; /* Prevent text wrapping in cells */
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.outside-table th {
+    background-color: #ff9800; /* Orange background color for table headers */
+    color: white; /* White text color for table headers */
+}
+
+/* Styling for the container and table */
+.container-and-table {
+    display: flex;
+    flex-direction: column;
+}
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #ccc;
+    width: 95%;
+    margin: 20px auto 30px;
+}
+
+.left-side, .right-side {
+    margin: 10px; /* Adjust margin as needed */
+}
+
+/* Add margin-bottom to create space between the table and the footer */
+.outside-table {
+    margin-bottom: 100px; /* Adjust as needed */
+}

@@ -1,0 +1,31 @@
+/* src/app/footer/footer.component.css */
+
+.footer {
+  display: flex;
+  padding-left: 120px;
+  padding-top: 5px;
+  color: white;
+  background-color: rgb(11, 11, 42);
+  position: fixed;
+  width: 93%;
+  bottom: 0;
+  
+}
+
+.weblink{
+  margin-right: 550px; /* Add some spacing between elements */
+}
+
+.link {
+  text-decoration: none;
+  color: inherit;
+}
+
+.link:hover {
+  text-decoration: underline;
+}
+.address,
+.number,
+.email{
+    margin-right: 60px;
+}

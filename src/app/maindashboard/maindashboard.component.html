@@ -1,0 +1,76 @@
+<!-- card.component.html -->
+<div class="card" (mouseover)="onMouseOver()" (mouseout)="onMouseOut()">
+    <div class="card-content">
+        <div style="width: 400px; height: 390px; margin: auto; display: flex; flex-direction: column; align-items: center;">
+            <div class="first30" style="text-align: center; margin-bottom: 20px;">
+                <h3 style="margin: 0;">Gates Scanned</h3>
+                <p style="margin: 0;">0/1,981,128</p>
+            </div>
+            <canvas id="myChart"></canvas>
+            <div class="button" (click)="toggleTableVisibility()">
+                <button>{{ buttonName }}</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div *ngIf="showTable" class="container-and-table">
+    <div class="container">
+        <div class="left-side">
+            <h3>Gates Summary</h3>
+        </div>
+        <div class="right-side">
+            <app-datepicker></app-datepicker>
+        </div>
+    </div>
+
+    <table border="1" class="outside-table">
+        <thead>
+            <tr>
+                <th>Sno</th>
+                <th>District</th>
+                <th>UlBs</th>
+                <th>Total Micropockets</th>
+                <th>Not Scanned Micropockets</th>
+                <th>Total Gates</th>
+                <th>N Gates Scanned</th>
+                <th>Residential (Total)</th>
+                <th>Residential (Scanned)</th>
+                <th>Residential %</th>
+                <th>Residential & Commercial (Total)</th>
+                <th>Residential & Commercial (Scanned)</th>
+                <th>Residential & Commercial %</th>
+                <th>Apartments (Total)</th>
+                <th>Apartments (Scanned)</th>
+                <th>Apartments %</th>
+                <th>Bulk Commercial (Total)</th>
+                <th>Bulk Commercial (Scanned)</th>
+                <th>Bulk Commercial %</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let item of items">
+                <td>{{ item.Sno }}</td>
+                <td>{{ item.District }}</td>
+                <td>{{ item.UlBs }}</td>
+                <td>{{ item['Total Micropockets'] }}</td>
+                <td>{{ item['Not Scanned Micropockets'] }}</td>
+                <td>{{ item['Total Gates'] }}</td>
+                <td>{{ item['N Gates Scanned'] }}</td>
+                <td>{{ item['Residential (Total)'] }}</td>
+                <td>{{ item['Residential (Scanned)'] }}</td>
+                <td>{{ item['Residential %'] }}</td>
+                <td>{{ item['Residential & Commercial (Total)'] }}</td>
+                <td>{{ item['Residential & Commercial (Scanned)'] }}</td>
+                <td>{{ item['Residential & Commercial %'] }}</td>
+                <td>{{ item['Apartments (Total)'] }}</td>
+                <td>{{ item['Apartments (Scanned)'] }}</td>
+                <td>{{ item['Apartments %'] }}</td>
+                <td>{{ item['Bulk Commercial (Total)'] }}</td>
+                <td>{{ item['Bulk Commercial (Scanned)'] }}</td>
+                <td>{{ item['Bulk Commercial %'] }}</td>
+            </tr>
+        </tbody>
+    </table>
+</div>

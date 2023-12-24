@@ -1,0 +1,11 @@
+/* Assuming the .header class is applied to the header div */
+.header {
+  overflow-clip-margin:content-box; /* Hide horizontal scrollbar */
+  overflow : clip;
+}
+
+.header img {
+  width: 100%; /* Make the image fill the width of its container */
+  height: auto; /* Maintain aspect ratio */
+  display: block; /* Remove any default inline spacing */
+}
